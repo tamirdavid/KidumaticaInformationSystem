@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1395DF6A-1E92-4F4F-B194-BED8A4E1C5C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kidumatica_Update</RootNamespace>
+    <AssemblyName>Kidumatica-Update</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityFeedback.cs" />
+    <Compile Include="OldFeedbacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldFeedbacks.Designer.cs">
+      <DependentUpon>OldFeedbacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentsFeedbackByGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentsFeedbackByGroup.Designer.cs">
+      <DependentUpon>ParentsFeedbackByGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNote.Designer.cs">
+      <DependentUpon>AddNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentDemandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentDemandForm.Designer.cs">
+      <DependentUpon>EquipmentDemandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentDemandForEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentDemandForEmployee.Designer.cs">
+      <DependentUpon>EquipmentDemandForEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillActivityFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FillActivityFeedback.Designer.cs">
+      <DependentUpon>FillActivityFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentsFeedbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentsFeedbackForm.Designer.cs">
+      <DependentUpon>ParentsFeedbackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RatingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RatingReportForm.Designer.cs">
+      <DependentUpon>RatingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenEquipmentDemandForLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenEquipmentDemandForLC.Designer.cs">
+      <DependentUpon>OpenEquipmentDemandForLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldEquipmentDemandForEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldEquipmentDemandForEmployee.Designer.cs">
+      <DependentUpon>OldEquipmentDemandForEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldEquipmentDemandForLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldEquipmentDemandForLC.Designer.cs">
+      <DependentUpon>OldEquipmentDemandForLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grade.cs" />
+    <Compile Include="LecturerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerMain.Designer.cs">
+      <DependentUpon>LecturerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogisticCoordinatorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogisticCoordinatorMain.Designer.cs">
+      <DependentUpon>LogisticCoordinatorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MentorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MentorMain.Designer.cs">
+      <DependentUpon>MentorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Question.cs" />
+    <Compile Include="Classes.cs" />
+    <Compile Include="EmplooyeTypes.cs" />
+    <Compile Include="contain.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EquipmentDemand.cs" />
+    <Compile Include="Note.cs" />
+    <Compile Include="ParentsFeedBack.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL_CON.cs" />
+    <Compile Include="StudentGroup.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMain.Designer.cs">
+      <DependentUpon>StudentMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="OldFeedbacks.resx">
+      <DependentUpon>OldFeedbacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentsFeedbackByGroup.resx">
+      <DependentUpon>ParentsFeedbackByGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNote.resx">
+      <DependentUpon>AddNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipmentDemandForEmployee.resx">
+      <DependentUpon>EquipmentDemandForEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillActivityFeedback.resx">
+      <DependentUpon>FillActivityFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentsFeedbackForm.resx">
+      <DependentUpon>ParentsFeedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RatingReportForm.resx">
+      <DependentUpon>RatingReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldEquipmentDemandForEmployee.resx">
+      <DependentUpon>OldEquipmentDemandForEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldEquipmentDemandForLC.resx">
+      <DependentUpon>OldEquipmentDemandForLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipmentDemandForm.resx">
+      <DependentUpon>EquipmentDemandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerMain.resx">
+      <DependentUpon>LecturerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogisticCoordinatorMain.resx">
+      <DependentUpon>LogisticCoordinatorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MentorMain.resx">
+      <DependentUpon>MentorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenEquipmentDemandForLC.resx">
+      <DependentUpon>OpenEquipmentDemandForLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="StudentMain.resx">
+      <DependentUpon>StudentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
